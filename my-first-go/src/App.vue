@@ -1,30 +1,27 @@
 <template>
-  <nav>
-    <router-link to="/">Home</router-link> |
-    <router-link to="/about">About</router-link>
-  </nav>
-  <router-view />
+  <div>
+    <HeaderComponent />
+
+    <div >
+      <SearchComponent />
+    </div>
+
+    <!-- Contenedor principal dividido en dos partes -->
+    <div >
+      <EmailTableComponent />
+
+      <TextComponent />
+    </div>
+  </div>
 </template>
 
-<style lang="scss">
-#app {
-  font-family: Avenir, Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
-}
+<script setup>
+import HeaderComponent from "./components/HeaderComponent.vue";
+import SearchComponent from "./components/SearchComponent.vue";
+import EmailTableComponent from "./components/EmailTableComponent.vue";
+import TextComponent from "./components/TextComponent.vue";
+</script>
 
-nav {
-  padding: 30px;
-
-  a {
-    font-weight: bold;
-    color: #2c3e50;
-
-    &.router-link-exact-active {
-      color: #42b983;
-    }
-  }
-}
+<style>
+/* Estilos CSS globales si es necesario */
 </style>
